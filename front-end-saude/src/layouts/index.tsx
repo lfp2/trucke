@@ -1,0 +1,93 @@
+import React from "react";
+import { createGlobalStyle, ThemeProvider } from "src/lib/StyledComponents";
+import { theme } from "src/theme";
+import Nav from "src/components/Nav";
+// import Footer from "src/components/Footer";
+// import { useLocation, useMedia } from "react-use";
+// import Footer from "src/components/Footer";
+import { useLocation } from "react-use";
+
+const GlobalStyle = createGlobalStyle`
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  #__next{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  html{
+    font-size: 62.5%;
+    background-color: ${props => props.theme.background};
+  }
+
+  div{
+    /* padding: 2rem; */
+    &#__next{
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    html {
+      font-size: 58%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    html{
+      font-size: 50%;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  aside {
+    overflow-y: scroll !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 1rem;
+    border-radius: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+`;
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // const small = useMedia("(min-width: 780px");
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {/* <Nav /> */}
+      {children}
+      {/* {!isBlog && <Footer />} */}
+    </ThemeProvider>
+  );
+};
+
+export default Layout;

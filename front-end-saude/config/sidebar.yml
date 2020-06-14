@@ -1,0 +1,9 @@
+# Sidebar navigation
+- label: "Site Principal"
+  link: "../"
+- label: "Começando"
+  link: "/blog"
+- label: "Previdencia"
+  items:
+    - label: "Diferenças entre aberta e fechada"
+      link: "/blog/previdencia/fechadaxaberta"
