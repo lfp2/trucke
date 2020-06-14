@@ -3,8 +3,10 @@ import Header from '../../components/Header';
 import { Container, HeaderText, Button } from './styles';
 import { Form } from '@unform/mobile';
 import MaskedBaseInput from '../../components/Input/maskedInput';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Cpf(){
+    const navigation = useNavigation();
     const formRef = useRef();
     const cpfRef = useRef();
     return (
@@ -25,7 +27,9 @@ export default function Cpf(){
             }}
           />
         </Form>
-        <Button isPrimary={true}>Bora lá</Button>
+        <Button isPrimary={true} onPress={() => navigation.navigate('SignUpFirst')}>
+          Bora lá
+        </Button>
       </Container>
     );
 }
