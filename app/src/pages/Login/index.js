@@ -8,8 +8,10 @@ import {
     HeaderText,
     Logo
 } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login(){
+    const navigation = useNavigation();
     return (
       <Container>
         <Logo />
@@ -20,7 +22,7 @@ export default function Login(){
         </TopSection>
         <Body>
           <Button isPrimary={true}>Entrar</Button>
-          <Button>Cadastrar</Button>
+          <Button onPress={() =>navigation.navigate('Cpf')}>Cadastrar</Button>
         </Body>
       </Container>
     );

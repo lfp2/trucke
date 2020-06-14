@@ -44,7 +44,7 @@ const ButtonText = styled.Text`
 export const Rectangle = styled.View`
   background-color: #FFC80B;
   width: 100%;
-  height: 30px;
+  height: 20px;
   margin: 10px auto;
 `;
 
@@ -69,8 +69,8 @@ export const Body = styled.View`
   justify-content: flex-start;
   align-items: center;
   background: ${props => props.theme.background};
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   position: relative;
   height: 100%;
   padding: 36px;
