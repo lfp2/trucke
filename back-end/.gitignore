@@ -1,0 +1,6 @@
+node_modules/
+.env
+firebase.json
+yarn.lock
+yarn.error
+app.yaml
