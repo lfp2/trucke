@@ -30,14 +30,16 @@ const Minified = ({ isOn }: { isOn: boolean }) => {
   );
 };
 
-const FullSize = ({ isOn }: { isOn: boolean }) => {
+const FullSize = ({ isOn, actions }: { isOn: boolean }) => {
   return (
     <FullSizeContainer isOn={isOn}>
       <FullsizeLogo />
       <Anchors>
         <Anchor icon="/icons/home.svg">Início</Anchor>
         <Anchor icon="/icons/user.svg">Perfil</Anchor>
-        <Anchor icon="/icons/plus.svg">Novo Paciente</Anchor>
+        <Anchor icon="/icons/plus.svg" onClick={actions.add}>
+          Novo Paciente
+        </Anchor>
         <Anchor icon="/icons/cog.svg">Configurações</Anchor>
         <Anchor icon="/icons/exit.svg">Sair</Anchor>
       </Anchors>
@@ -45,14 +47,14 @@ const FullSize = ({ isOn }: { isOn: boolean }) => {
   );
 };
 
-const Nav: React.FC = ({ children }) => {
+const Nav: React.FC = ({ children, actions }) => {
   const [isOn, toggle] = useToggle(false);
   return (
     <Wrapper isOn={isOn}>
       <Main isOn={isOn}>{children}</Main>
       <Container isOn={isOn}>
         <Minified isOn={isOn} />
-        <FullSize isOn={isOn} />
+        <FullSize actions={actions} isOn={isOn} />
         <MenuToggler onClick={() => toggle()} isOn={isOn} />
       </Container>
     </Wrapper>

@@ -122,7 +122,6 @@ export const FullSizeContainer = styled.div<{ isOn: boolean }>`
   width: 250px;
   transition: opacity 0.3s ease-in-out;
   opacity: ${p => (p.isOn ? 1 : 0)};
-  user-select: ${p => (p.isOn ? "all" : "none")};
   pointer-events: ${p => (p.isOn ? "all" : "none")};
 `;
 
