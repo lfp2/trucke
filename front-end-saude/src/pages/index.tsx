@@ -123,7 +123,13 @@ const Home = () => {
   useTitle("Estrada para a Saúde");
   return (
     <>
-      <Nav>
+      <Nav
+        actions={{
+          add: () => {
+            toggleSearch(true);
+          }
+        }}
+      >
         <TableWrapper>
           <TableHeader
             action={() => {
