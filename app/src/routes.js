@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginScreen from "./pages/Login";
 import CpfScreen from './pages/Cpf';
+import MenuScreen from './pages/Menu';
 import SignUpFirstScreen from './pages/Cadastro/firstScreen';
 
 const Stack =  createStackNavigator();
@@ -17,6 +18,7 @@ export default function Routes(){
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Cpf" component={CpfScreen} />
           <Stack.Screen name="SignUpFirst" component={SignUpFirstScreen} />
+          <Stack.Screen name="Menu" component={MenuScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -21,7 +21,7 @@ export default function FirstScreen() {
       <TruckerPic />
       <TransportadoraPic />
       <HeaderText>É você?</HeaderText>
-      <Button isPrimary={true}>Sim, Tks</Button>
+      <Button isPrimary={true} onPress={()=>{navigation.navigate("Menu")}}>Sim, Tks</Button>
       <Button>Não</Button>
     </Container>
   );

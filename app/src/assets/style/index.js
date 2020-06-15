@@ -7,6 +7,7 @@ export const theme = {
   lightGray: '#C4C4C4',
   darkGray: '#9E9E9E',
   error: '#DE3B3B',
+  darkBlue: '#252D3C',
   texture: css`
     background-image: url('../svg/texture.svg');
     background-color: #e6dfb3;
